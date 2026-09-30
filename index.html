@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARVEL UNIVERSE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#050505;color:white;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;width:100%;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(0,0,0,.75);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
+.logo{font-size:27px;font-weight:900;letter-spacing:2px;background:#e62429;color:white;padding:7px 14px;transform:skew(-8deg)}
+nav ul{list-style:none;display:flex;gap:35px}nav a{color:white;text-decoration:none;font-weight:bold;font-size:14px;transition:.3s}nav a:hover{color:#e62429}
+.hero{height:100vh;min-height:650px;display:flex;align-items:center;padding:120px 8% 60px;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.65),rgba(0,0,0,.2)),radial-gradient(circle at 80% 50%,#8b0000,#160000 35%,#050505 70%)}
+.hero:before{content:"";position:absolute;width:500px;height:500px;right:-150px;top:100px;background:#e62429;filter:blur(180px);opacity:.25;animation:pulse 4s infinite alternate}
+@keyframes pulse{from{transform:scale(.9);opacity:.15}to{transform:scale(1.2);opacity:.35}}
+.hero-content{position:relative;z-index:2;max-width:700px}.small-title{color:#e62429;font-weight:bold;letter-spacing:5px;margin-bottom:20px}
+.hero h1{font-size:clamp(60px,10vw,130px);line-height:.85;font-weight:900;text-transform:uppercase;text-shadow:5px 5px 0 #8b0000,0 0 30px rgba(230,36,41,.3)}
+.hero h1 span,.section-title span{color:#e62429}.hero p{margin-top:30px;color:#ccc;font-size:19px;line-height:1.7;max-width:600px}
+.hero-buttons{display:flex;gap:15px;margin-top:35px}.btn{padding:16px 30px;border-radius:5px;text-decoration:none;font-weight:bold;transition:.3s}.red{background:#e62429;color:white;box-shadow:0 0 30px rgba(230,36,41,.3)}.red:hover{background:#ff3439;transform:translateY(-4px)}.dark{border:1px solid #555;color:white}.dark:hover{border-color:#e62429}
+section{padding:100px 8%}.section-title{text-align:center;font-size:45px;margin-bottom:60px}
+.heroes{background:linear-gradient(#050505,#0b0b0b)}.hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
+.hero-card{height:420px;position:relative;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.95));border:1px solid #222;transition:.4s}
+.hero-card:hover{transform:translateY(-12px) scale(1.02);border-color:#e62429;box-shadow:0 20px 60px rgba(230,36,41,.2)}
+.hero-card:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;transition:.5s}.hero-card:hover:before{transform:scale(1.1)}
+.ironman:before{background:linear-gradient(transparent,#000),url("https://images.unsplash.com/photo-1531259683007-016a7b628fc3?auto=format&fit=crop&w=700&q=80") center/cover}
+.spiderman:before{background:linear-gradient(transparent,#000),url("https://images.unsplash.com/photo-1635863138275-d9b33299680b?auto=format&fit=crop&w=700&q=80") center/cover}
+.captain:before{background:linear-gradient(transparent,#000),url("https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=700&q=80") center/cover}
+.thor:before{background:linear-gradient(transparent,#000),url("https://images.unsplash.com/photo-1579566346927-c68383817a25?auto=format&fit=crop&w=700&q=80") center/cover}
+.hero-info{position:absolute;bottom:25px;left:25px;z-index:2}.hero-info h3{font-size:30px}.hero-info p{color:#aaa;margin-top:5px}
+.timeline{background:#090909}.timeline-box{max-width:900px;margin:auto}.timeline-item{display:flex;gap:30px;padding:30px;border-left:3px solid #e62429;margin-bottom:20px;background:rgba(255,255,255,.03);transition:.3s}.timeline-item:hover{background:rgba(230,36,41,.08)}
+.year{color:#e62429;font-size:25px;font-weight:bold;min-width:90px}.timeline-item h3{font-size:24px;margin-bottom:8px}.timeline-item p{color:#999;line-height:1.5}
+.cta{text-align:center;background:radial-gradient(circle,rgba(230,36,41,.25),transparent 60%)}.cta h2{font-size:clamp(40px,7vw,80px);margin-bottom:25px}.cta p{color:#999;margin-bottom:30px}
+footer{padding:40px;text-align:center;color:#666;border-top:1px solid #222}footer strong{color:#e62429}
+@media(max-width:900px){nav ul{display:none}.hero-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.hero{text-align:center}.hero-content{margin:auto}.hero-buttons{justify-content:center;flex-wrap:wrap}.hero-grid{grid-template-columns:1fr}section{padding:80px 6%}.timeline-item{flex-direction:column;gap:10px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">MARVEL</div><ul><li><a href="#home">START</a></li><li><a href="#heroes">BOHATEROWIE</a></li><li><a href="#timeline">UNIWERSUM</a></li><li><a href="#contact">KONTAKT</a></li></ul></nav>
+<section class="hero" id="home"><div class="hero-content"><div class="small-title">MARVEL UNIVERSE</div><h1>ENTER<br><span>THE HEROES.</span></h1><p>Odkryj świat niezwykłych bohaterów, epickich historii i największych przygód Marvel Universe.</p><div class="hero-buttons"><a href="#heroes" class="btn red">POZNAJ BOHATERÓW</a><a href="#timeline" class="btn dark">ODKRYJ UNIWERSUM</a></div></div></section>
+<section class="heroes" id="heroes"><h2 class="section-title">NAJWIĘKSI <span>BOHATEROWIE</span></h2><div class="hero-grid">
+<div class="hero-card ironman"><div class="hero-info"><h3>Iron Man</h3><p>Tony Stark</p></div></div>
+<div class="hero-card spiderman"><div class="hero-info"><h3>Spider-Man</h3><p>Peter Parker</p></div></div>
+<div class="hero-card captain"><div class="hero-info"><h3>Captain America</h3><p>Steve Rogers</p></div></div>
+<div class="hero-card thor"><div class="hero-info"><h3>Thor</h3><p>God of Thunder</p></div></div>
+</div></section>
+<section class="timeline" id="timeline"><h2 class="section-title">MARVEL <span>UNIVERSE</span></h2><div class="timeline-box">
+<div class="timeline-item"><div class="year">2008</div><div><h3>Iron Man</h3><p>Historia Tony'ego Starka rozpoczyna nową erę filmowego uniwersum Marvela.</p></div></div>
+<div class="timeline-item"><div class="year">2012</div><div><h3>The Avengers</h3><p>Najwięksi bohaterowie łączą siły, aby stawić czoła wspólnemu zagrożeniu.</p></div></div>
+<div class="timeline-item"><div class="year">2018</div><div><h3>Infinity War</h3><p>Avengers stają przed jednym z największych zagrożeń w historii.</p></div></div>
+<div class="timeline-item"><div class="year">2019</div><div><h3>Endgame</h3><p>Bohaterowie podejmują walkę, która zmieni losy całego uniwersum.</p></div></div>
+</div></section>
+<section class="cta" id="contact"><h2>GOTOWY NA<br><span style="color:#e62429;">PRZYGODĘ?</span></h2><p>Świat Marvela czeka.</p><a href="#home" class="btn red">WRÓĆ NA GÓRĘ ↑</a></section>
+<footer><p>Fanowska strona inspirowana światem <strong>Marvel</strong>.</p><p style="margin-top:10px;">© 2026 — Marvel Universe Fan Site</p></footer>
+</body>
+</html>
